@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Determinar el resultado
-    let maxScore = Math.max(Object.values(score));
+    let maxScore = Math.max(...Object.values(score));
     let resultCategories = Object.keys(score).filter(
       (key) => score[key] === maxScore
     );
@@ -120,10 +120,12 @@ document.addEventListener("DOMContentLoaded", () => {
       score,
       null,
       2
-    )}\n\nTu orientación predominante es: ${resultCategories.join(" o ")}`;
+    )}\n\nTu orientación predominante es: ${resultCategories.join("o")}`;
 
     // Mostrar resultado en un alert y luego reiniciar el formulario
     alert(message);
     form.reset();
+    console.log(resultCategories);
+    console.log(maxScore);
   });
 });
