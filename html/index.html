@@ -3,16 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cuestionario de Orientación</title>
-    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- Opcional: tu propio archivo de estilos -->
-    <link rel="stylesheet" href="style.css" />
+    <title>Cuestionario de Orientación</title>
+
+    <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
+    <!-- Barra de navegacion -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navegacion">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="">Test de Sexualidad</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Cuestionario</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Definiciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Formato de Calificacion</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Formulario -->
     <div class="container mt-5">
       <h1 class="mb-4">Cuestionario de Orientación</h1>
       <form id="quizForm">
@@ -25,12 +57,12 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q1"
+              name="question1"
               id="q1a"
               value="heterosexual"
               required
             />
-            <label class="form-check-label" for="q1a">
+            <label class="form-check-label" for="question_1a">
               a) Solo con el sexo opuesto
             </label>
           </div>
@@ -38,11 +70,11 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q1"
+              name="question1"
               id="q1b"
               value="homosexual"
             />
-            <label class="form-check-label" for="q1b">
+            <label class="form-check-label" for="question_1b">
               b) Solo con el mismo sexo
             </label>
           </div>
@@ -50,11 +82,11 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q1"
+              name="question1"
               id="q1c"
               value="bisexual"
             />
-            <label class="form-check-label" for="q1c">
+            <label class="form-check-label" for="question_c">
               c) Con ambos sexos por igual
             </label>
           </div>
@@ -62,11 +94,11 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q1"
+              name="question1"
               id="q1d"
               value="asexual"
             />
-            <label class="form-check-label" for="q1d">
+            <label class="form-check-label" for="question_d">
               d) No siento atracción romántica
             </label>
           </div>
@@ -74,11 +106,11 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q1"
+              name="question1"
               id="q1e"
               value="transexual"
             />
-            <label class="form-check-label" for="q1e">
+            <label class="form-check-label" for="question_e">
               e) Mi atracción romántica ha cambiado desde mi transición
             </label>
           </div>
@@ -93,12 +125,12 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q2"
+              name="question2"
               id="q2a"
               value="heterosexual"
               required
             />
-            <label class="form-check-label" for="q2a">
+            <label class="form-check-label" for="question_1a">
               a) Solo con el sexo opuesto
             </label>
           </div>
@@ -106,11 +138,11 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q2"
+              name="question2"
               id="q2b"
               value="homosexual"
             />
-            <label class="form-check-label" for="q2b">
+            <label class="form-check-label" for="question_2b">
               b) Solo con el mismo sexo
             </label>
           </div>
@@ -118,11 +150,11 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q2"
+              name="question2"
               id="q2c"
               value="bisexual"
             />
-            <label class="form-check-label" for="q2c">
+            <label class="form-check-label" for="question_2c">
               c) Con ambos sexos por igual
             </label>
           </div>
@@ -130,11 +162,11 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q2"
+              name="question2"
               id="q2d"
               value="asexual"
             />
-            <label class="form-check-label" for="q2d">
+            <label class="form-check-label" for="question_2d">
               d) No siento atracción sexual
             </label>
           </div>
@@ -142,11 +174,11 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q2"
+              name="question2"
               id="q2e"
               value="transexual"
             />
-            <label class="form-check-label" for="q2e">
+            <label class="form-check-label" for="question_2e">
               e) Mi atracción ha cambiado desde mi transición
             </label>
           </div>
@@ -161,12 +193,12 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q3"
+              name="question3"
               id="q3a"
               value="a"
               required
             />
-            <label class="form-check-label" for="q3a">
+            <label class="form-check-label" for="question_3a">
               a) Sí, completamente
             </label>
           </div>
@@ -174,11 +206,11 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q3"
+              name="question3"
               id="q3b"
               value="b"
             />
-            <label class="form-check-label" for="q3b">
+            <label class="form-check-label" for="question_3b">
               b) No, me identifico con un género diferente al asignado al nacer
             </label>
           </div>
@@ -194,12 +226,12 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q4"
+              name="question4"
               id="q4a"
               value="heterosexual"
               required
             />
-            <label class="form-check-label" for="q4a">
+            <label class="form-check-label" for="question_4a">
               a) Solo con el sexo opuesto
             </label>
           </div>
@@ -207,12 +239,12 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q4"
+              name="question4"
               id="q4b"
               value="homosexual"
               required
             />
-            <label class="form-check-label" for="q4b">
+            <label class="form-check-label" for="question_4b">
               b) Solo con el mismo sexo
             </label>
           </div>
@@ -220,11 +252,11 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q4"
+              name="question4"
               id="q4c"
               value="bisexual"
             />
-            <label class="form-check-label" for="q4c">
+            <label class="form-check-label" for="question_4c">
               c) Con ambos sexos
             </label>
           </div>
@@ -232,11 +264,11 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q4"
+              name="question4"
               id="q4d"
               value="asexual"
             />
-            <label class="form-check-label" for="q4d">
+            <label class="form-check-label" for="question_4d">
               d) No me interesa el sexo ni el romance
             </label>
           </div>
@@ -251,22 +283,22 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q5"
+              name="question5"
               id="q5a"
               value="a"
               required
             />
-            <label class="form-check-label" for="q5a"> a) Sí </label>
+            <label class="form-check-label" for="question_5a"> a) Sí </label>
           </div>
           <div class="form-check">
             <input
               class="form-check-input"
               type="radio"
-              name="q5"
+              name="question5"
               id="q5b"
               value="transexual"
             />
-            <label class="form-check-label" for="q5b">
+            <label class="form-check-label" for="question_5b">
               b) No, preferiría ser reconocido como otro género
             </label>
           </div>
@@ -282,22 +314,22 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q6"
+              name="question6"
               id="q6a"
               value="a"
               required
             />
-            <label class="form-check-label" for="q6a"> a) Nunca </label>
+            <label class="form-check-label" for="question_6a"> a) Nunca </label>
           </div>
           <div class="form-check">
             <input
               class="form-check-input"
               type="radio"
-              name="q6"
+              name="question6"
               id="q6b"
               value="b"
             />
-            <label class="form-check-label" for="q6b">
+            <label class="form-check-label" for="question_6b">
               b) Sí, algunas veces
             </label>
           </div>
@@ -305,11 +337,11 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q6"
+              name="question6"
               id="q6c"
               value="asexual"
             />
-            <label class="form-check-label" for="q6c">
+            <label class="form-check-label" for="question_6c">
               c) No siento atracción sexual en general
             </label>
           </div>
@@ -325,12 +357,12 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q7"
+              name="question7"
               id="q7a"
               value="heterosexual"
               required
             />
-            <label class="form-check-label" for="q7a">
+            <label class="form-check-label" for="question_7a">
               a) Solo el sexo opuesto
             </label>
           </div>
@@ -338,11 +370,11 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q7"
+              name="question7"
               id="q7b"
               value="homosexual"
             />
-            <label class="form-check-label" for="q7b">
+            <label class="form-check-label" for="question_7b">
               b) Solo el mismo sexo
             </label>
           </div>
@@ -350,22 +382,37 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q7"
+              name="question7"
               id="q7c"
               value="bisexual"
             />
-            <label class="form-check-label" for="q7c"> c) Ambos géneros </label>
+            <label class="form-check-label" for="question_7c">
+              c) Ambos géneros
+            </label>
           </div>
           <div class="form-check">
             <input
               class="form-check-input"
               type="radio"
-              name="q7"
+              name="question7"
               id="q7d"
               value="asexual"
             />
-            <label class="form-check-label" for="q7d">
+            <label class="form-check-label" for="question_7d">
               d) No tengo interés en relaciones románticas o sexuales
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="question7"
+              id="q7e"
+              value="transexual"
+            />
+            <label class="form-check-label" for="question_7d">
+              e) Prefiero una pareja con identidad de género distinta a la
+              asignada al nacer
             </label>
           </div>
         </div>
@@ -379,52 +426,60 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q8"
+              name="question8"
               id="q8a"
               value="heterosexual"
               required
             />
-            <label class="form-check-label" for="q8a"> a) Heterosexual </label>
+            <label class="form-check-label" for="question_8a">
+              a) Heterosexual
+            </label>
           </div>
           <div class="form-check">
             <input
               class="form-check-input"
               type="radio"
-              name="q8"
+              name="question8"
               id="q8b"
               value="homosexual"
             />
-            <label class="form-check-label" for="q8b"> b) Homosexual </label>
+            <label class="form-check-label" for="question_8b">
+              b) Homosexual
+            </label>
           </div>
           <div class="form-check">
             <input
               class="form-check-input"
               type="radio"
-              name="q8"
+              name="question8"
               id="q8c"
               value="bisexual"
             />
-            <label class="form-check-label" for="q8c"> c) Bisexual </label>
+            <label class="form-check-label" for="question_8c">
+              c) Bisexual
+            </label>
           </div>
           <div class="form-check">
             <input
               class="form-check-input"
               type="radio"
-              name="q8"
+              name="question8"
               id="q8d"
               value="asexual"
             />
-            <label class="form-check-label" for="q8d"> d) Asexual </label>
+            <label class="form-check-label" for="question_8d">
+              d) Asexual
+            </label>
           </div>
           <div class="form-check">
             <input
               class="form-check-input"
               type="radio"
-              name="q8"
+              name="question8"
               id="q8e"
               value="transexual"
             />
-            <label class="form-check-label" for="q8e">
+            <label class="form-check-label" for="question_8e">
               e) Transexual con orientación variable
             </label>
           </div>
@@ -433,32 +488,34 @@
         <!-- Pregunta 9 -->
         <div class="mb-3">
           <label class="form-label">
-            9. ¿Has experimentado cambios en tu identidad de género o atracción
-            a lo largo de tu vida?
+            9. ¿Cómo describirías tu identidad de género y tu orientación sexual
+            actualmente?
           </label>
           <div class="form-check">
             <input
               class="form-check-input"
               type="radio"
-              name="q9"
+              name="question9"
               id="q9a"
               value="a"
               required
             />
-            <label class="form-check-label" for="q9a">
-              a) No, siempre ha sido la misma
+            <label class="form-check-label" for="question_9a">
+              a) Mi identidad de género y orientación sexual siempre han sido
+              constantes
             </label>
           </div>
           <div class="form-check">
             <input
               class="form-check-input"
               type="radio"
-              name="q9"
+              name="question9"
               id="q9b"
               value="b"
             />
-            <label class="form-check-label" for="q9b">
-              b) Sí, ha cambiado con el tiempo
+            <label class="form-check-label" for="question_9b">
+              b) He experimentado cambios en mi identidad de género u
+              orientación sexual a lo largo del tiempo
             </label>
           </div>
         </div>
@@ -473,12 +530,12 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q10"
+              name="question10"
               id="q10a"
               value="a"
               required
             />
-            <label class="form-check-label" for="q10a">
+            <label class="form-check-label" for="question_10a">
               a) Con mi género
             </label>
           </div>
@@ -486,11 +543,11 @@
             <input
               class="form-check-input"
               type="radio"
-              name="q10"
+              name="question10"
               id="q10b"
               value="b"
             />
-            <label class="form-check-label" for="q10b">
+            <label class="form-check-label" for="question_10b">
               b) Con mi orientación
             </label>
           </div>
@@ -503,7 +560,7 @@
       <div id="result" class="mt-4"></div>
     </div>
 
-    <script src="../js/scripts.js"></script>
+    <script src="../Js/scripts.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>

@@ -1,11 +1,10 @@
-// Esperar a que el DOM esté cargado
+"use strict";
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("quizForm");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    // Objeto para llevar la cuenta de cada categoría
     let score = {
       heterosexual: 0,
       homosexual: 0,
@@ -14,134 +13,117 @@ document.addEventListener("DOMContentLoaded", () => {
       transexual: 0,
     };
 
-    // Recoger las respuestas del formulario
     const formData = new FormData(form);
 
-    // ---------------------------
-    // Pregunta 1: "valor directo"
-    // El valor seleccionado (por ejemplo "heterosexual") se usa para incrementar directamente la puntuación de esa categoría.
-    const q1 = formData.get("q1");
-    if (q1) {
-      score[q1]++;
-    }
+    // Pregunta 1
+    const question1 = formData.get("question1");
+    if (question1 === "heterosexual") score["heterosexual"]++;
+    else if (question1 === "homosexual") score["homosexual"]++;
+    else if (question1 === "bisexual") score["bisexual"]++;
+    else if (question1 === "asexual") score["asexual"]++;
+    else if (question1 === "transexual") score["transexual"]++;
 
-    // ---------------------------
-    // Pregunta 2: "valor directo"
-    const q2 = formData.get("q2");
-    if (q2) {
-      score[q2]++;
-    }
+    // Pregunta 2
+    const question2 = formData.get("question2");
+    if (question2 === "heterosexual") score["heterosexual"]++;
+    else if (question2 === "homosexual") score["homosexual"]++;
+    else if (question2 === "bisexual") score["bisexual"]++;
+    else if (question2 === "asexual") score["asexual"]++;
+    else if (question2 === "transexual") score["transexual"]++;
 
-    // ---------------------------
-    // Pregunta 3:
-    // Si la respuesta es "a" (Sí, completamente) se asigna un punto a las categorías: heterosexual, homosexual, bisexual y asexual.
-    // Si la respuesta es "b" (No, me identifico con un género diferente al asignado) se asigna un punto a transexual.
-    const q3 = formData.get("q3");
-    if (q3 === "a") {
+    // Pregunta 3
+    const question3 = formData.get("question3");
+    if (question3 === "a") {
       score["heterosexual"]++;
       score["homosexual"]++;
       score["bisexual"]++;
       score["asexual"]++;
-    } else if (q3 === "b") {
+    } else if (question3 === "b") {
       score["transexual"]++;
     }
 
-    // ---------------------------
-    // Pregunta 4: "valor directo"
-    const q4 = formData.get("q4");
-    if (q4) {
-      score[q4]++;
-    }
+    // Pregunta 4
+    const question4 = formData.get("question4");
+    if (question4 === "heterosexual") score["heterosexual"]++;
+    else if (question4 === "homosexual") score["homosexual"]++;
+    else if (question4 === "bisexual") score["bisexual"]++;
+    else if (question4 === "asexual") score["asexual"]++;
 
-    // ---------------------------
-    // Pregunta 5:
-    // Si elige "a" (Sí) no se suma ningún punto (aunque se puede interpretar que descarta la opción transexual).
-    // Si elige "b" (No, preferiría ser reconocido como otro género) se suma un punto a transexual.
-    const q5 = formData.get("q5");
-    if (q5 === "transexual") {
+    // Pregunta 5
+    const question5 = formData.get("question5");
+    if (question5 === "b") {
       score["transexual"]++;
-    }
-
-    // ---------------------------
-    // Pregunta 6:
-    // a) Nunca → suma 1 a heterosexual y homosexual.
-    // b) Sí, algunas veces → suma 1 a bisexual y 1 a transexual.
-    // c) No siento atracción sexual en general → suma 1 a asexual.
-    const q6 = formData.get("q6");
-    if (q6 === "a") {
-      score["heterosexual"]++;
-      score["homosexual"]++;
-    } else if (q6 === "b") {
-      score["bisexual"]++;
-      score["transexual"]++;
-    } else if (q6 === "asexual") {
-      score["asexual"]++;
-    }
-
-    // ---------------------------
-    // Pregunta 7: "valor directo"
-    const q7 = formData.get("q7");
-    if (q7) {
-      score[q7]++;
-    }
-
-    // ---------------------------
-    // Pregunta 8: "valor directo"
-    const q8 = formData.get("q8");
-    if (q8) {
-      score[q8]++;
-    }
-
-    // ---------------------------
-    // Pregunta 9:
-    // a) No, siempre ha sido la misma → suma 1 a heterosexual, homosexual, bisexual y asexual.
-    // b) Sí, ha cambiado con el tiempo → suma 1 a transexual y 1 a bisexual.
-    const q9 = formData.get("q9");
-    if (q9 === "a") {
+    } else {
       score["heterosexual"]++;
       score["homosexual"]++;
       score["bisexual"]++;
       score["asexual"]++;
-    } else if (q9 === "b") {
+    }
+
+    // Pregunta 6
+    const question6 = formData.get("question6");
+    if (question6 === "a") {
+      score["heterosexual"]++;
+      score["homosexual"]++;
+    } else if (question6 === "b") {
+      score["bisexual"]++;
       score["transexual"]++;
+    } else {
+      score["asexual"]++;
+    }
+
+    // Pregunta 7
+    const question7 = formData.get("question7");
+    if (question7 === "heterosexual") score["heterosexual"]++;
+    else if (question7 === "homosexual") score["homosexual"]++;
+    else if (question7 === "bisexual") score["bisexual"]++;
+    else if (question7 === "asexual") score["asexual"]++;
+    else if (question7 === "transexual") score["transexual"]++;
+
+    // Pregunta 8
+    const question8 = formData.get("question8");
+    if (question8 === "heterosexual") score["heterosexual"]++;
+    else if (question8 === "homosexual") score["homosexual"]++;
+    else if (question8 === "bisexual") score["bisexual"]++;
+    else if (question8 === "asexual") score["asexual"]++;
+    else if (question8 === "transexual") score["transexual"]++;
+
+    // Pregunta 9
+    const question9 = formData.get("question9");
+    if (question9 === "a") {
+      score["heterosexual"]++;
+      score["homosexual"]++;
+      score["asexual"]++;
+    } else if (question9 === "b") {
+      score["homosexual"]++;
       score["bisexual"]++;
     }
 
-    // ---------------------------
-    // Pregunta 10:
-    // a) Con mi género → suma 1 a transexual.
-    // b) Con mi orientación → en este ejemplo no suma punto adicional (pero se podría usar para desempate u otra lógica).
-    const q10 = formData.get("q10");
-    if (q10 === "a") {
+    // Pregunta 10
+    const question10 = formData.get("question10");
+    if (question10 === "a") {
       score["transexual"]++;
-    }
-    // ---------------------------
-    // Determinar cuál o cuáles categorías tienen la puntuación máxima
-    let maxScore = 0;
-    let resultCategories = [];
-    for (let category in score) {
-      if (score[category] > maxScore) {
-        maxScore = score[category];
-        resultCategories = [category];
-      } else if (score[category] === maxScore) {
-        resultCategories.push(category);
-      }
+    } else {
+      score["heterosexual"]++;
+      score["homosexual"]++;
+      score["bisexual"]++;
+      score["asexual"]++;
     }
 
-    // Preparar el mensaje del resultado
+    // Determinar el resultado
+    let maxScore = Math.max(Object.values(score));
+    let resultCategories = Object.keys(score).filter(
+      (key) => score[key] === maxScore
+    );
+
     const message = `Resultado del Quiz:\n\nTu puntuación es:\n${JSON.stringify(
       score,
       null,
       2
-    )}\n\nLa inclinación sexual predominante es: ${resultCategories.join(
-      " o "
-    )}`;
+    )}\n\nTu orientación predominante es: ${resultCategories.join(" o ")}`;
 
-    // Mostrar el resultado en una alerta
+    // Mostrar resultado en un alert y luego reiniciar el formulario
     alert(message);
-    // Reiniciar el formulario para poder hacerlo nuevamente
     form.reset();
-    // Recargar la página para limpiar completamente el formulario
-    location.reload();
   });
 });
