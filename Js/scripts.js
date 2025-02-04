@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
       score,
       null,
       2
-    )}\n\nTu orientación predominante es: ${resultCategories.join("o")}`;
+    )}\n\nTu orientación predominante es: ${resultCategories.join(" o ")}`;
 
     // Mostrar resultado en un alert y luego reiniciar el formulario
     alert(message);
