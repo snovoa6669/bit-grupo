@@ -23,4 +23,4 @@
 
 
 Si deseas puedes revisar mi pagina en el siguiente link:
-[[Visitar mi pagina]()](https://snovoa6669.github.io/bit-grupo/) 
+(https://snovoa6669.github.io/bit-grupo/) 
